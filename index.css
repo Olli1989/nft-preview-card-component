@@ -1,0 +1,173 @@
+:root {
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-600: 600;
+
+  --bgc-dark-blue-main: hsl(217, 54%, 11%);
+  --bgc-dark-blue-card: hsl(216, 50%, 16%);
+  --bgc-dark-blue-line: hsl(215, 32%, 27%);
+  --bgc-cyan-light: hsla(178, 100%, 50%, 0.5);
+
+  --fc-white: hsl(0, 0%, 100%);
+  --fc-soft-blue: hsl(215, 51%, 70%);
+  --fc-cyan: hsl(178, 100%, 50%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*---Typography---*/
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.1.25rem;
+  font-weight: var(--fw-300);
+
+  background: var(--bgc-dark-blue-main);
+  color: var(--fc-white);
+
+  padding-top: 6em;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h1,
+.price,
+.days {
+  font-weight: var(--fw-600);
+}
+
+h1 + p {
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.card {
+  background: var(--bgc-dark-blue-card);
+  padding: 1.6em;
+  border-radius: 15px;
+  box-shadow: 0 0 20px 25px rgba(0, 0, 0, 0.1);
+}
+
+h1 + p,
+.days,
+img + p {
+  color: var(--fc-soft-blue);
+}
+
+.price {
+  color: var(--fc-cyan);
+}
+
+.created-by-name {
+  color: var(--fc-white);
+}
+
+/*---Layout---*/
+/*---Main---*/
+.container {
+  max-width: 375px;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.card-img-container {
+  position: relative;
+}
+
+.card-img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+h1 + p {
+  width: 90%;
+}
+
+.container-price {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+  border-bottom: 1px solid var(--bgc-dark-blue-line);
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+}
+
+.flex-row svg {
+  margin-right: 0.5em;
+}
+
+.created-by {
+  margin-top: 1em;
+  display: flex;
+}
+
+.created-by-img {
+  align-self: center;
+  width: 40px;
+  border: 2px solid var(--fc-white);
+  border-radius: 50%;
+}
+
+.created-by p {
+  margin-left: 1em;
+}
+
+/*---footer---*/
+footer {
+  margin-top: 3em;
+}
+
+.footer-text {
+  text-align: center;
+}
+
+.footer-text p {
+  margin: 0;
+}
+
+/*---Hover---*/
+h1:hover,
+.created-by-name:hover {
+  color: var(--fc-cyan);
+}
+
+.card-overlay:hover {
+  background: var(--bgc-cyan-light);
+  border-radius: 10px;
+  opacity: 1;
+}
+
+/*---Media Queries---*/
+@media (min-width: 375px) {
+  .card {
+    box-shadow: 0 30px 20px 20px rgba(0, 0, 0, 0.05),
+      0 30px 20px 50px rgba(0, 0, 0, 0.04);
+  }
+}
