@@ -158,12 +158,14 @@ footer {
 h1:hover,
 .created-by-name:hover {
   color: var(--fc-cyan);
+  cursor: pointer;
 }
 
 .card-overlay:hover {
   background: var(--bgc-cyan-light);
   border-radius: 10px;
   opacity: 1;
+  cursor: pointer;
 }
 
 /*---Media Queries---*/
